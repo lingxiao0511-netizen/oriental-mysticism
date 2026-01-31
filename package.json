@@ -1,26 +1,20 @@
-{
-  "name": "xuanxue-ecommerce",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "13.5.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "20.10.0",
-    "@types/react": "18.2.0",
-    "@types/react-dom": "18.2.0",
-    "eslint": "8.49.0",
-    "eslint-config-next": "13.5.6",
-    "postcss": "8.4.31",
-    "tailwindcss": "3.3.3",
-    "typescript": "5.2.2"
-  }
+import type { Metadata } from 'next'
+
+// 这里定义网站的标题和描述（对应你原来代码里的 <标题> 和 <元文化>）
+export const metadata: Metadata = {
+  title: '东方玄学',
+  description: '探索神秘的东方玄学，提供专业的风水、命理、塔罗牌等服务',
+}
+
+// 这是必须的英文语法结构
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="zh">
+      <body>{children}</body>
+    </html>
+  )
 }
