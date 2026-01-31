@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #8B4513;
+  --secondary: #DAA520;
+  --accent: #9370DB;
+  --background: #F5F5DC;
+  --text: #333333;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+/* 神秘东方风格的自定义样式 */
+.oriental-border {
+  border: 1px solid var(--secondary);
+  box-shadow: 0 0 10px rgba(218, 165, 32, 0.3);
+}
+
+.oriental-gradient {
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.1), rgba(218, 165, 32, 0.1));
+}
+
+.oriental-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.oriental-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(139, 69, 19, 0.2);
+}
+
+/* 响应式设计调整 */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
